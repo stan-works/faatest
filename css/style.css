@@ -1,0 +1,695 @@
+:root {
+    --main-color: rgb(1, 53, 109);
+    --sub-color: rgb(216, 241, 255);
+}
+
+html {
+    scroll-behavior: smooth;
+    /* ページ内リンクを押した時、スムーズに画面をスクロールする */
+    scroll-padding-top: 90px;
+    /* ヘッダーの高さ */
+}
+
+body {
+    /* font-family: "Work Sans", serif, "Zen Old Mincho", serif; */
+    /* font-family: "Kaisei Tokumin", serif; */
+    color: rgb(40, 40, 40);
+    line-height: 1.75em;
+
+}
+
+img {
+    width: 100%;
+    height: 100%;
+}
+
+#wrapper {
+    max-width: 800px;
+    margin-inline: auto;
+    padding-inline: 1rem;
+}
+
+section {
+    margin-block: 5rem;
+}
+
+.header {
+    position: fixed;
+    /* 固定位置 */
+    top: 0;
+    left: 0;
+    right: 0;
+    background-color: rgb(255, 255, 255);
+    /* 初期は不透明 */
+    padding: 10px 20px;
+    /* 内側の余白 */
+    z-index: 1000;
+    /* 他の要素の上に表示 */
+    transition: background-color 0.3s;
+    /* 背景色の変化をスムーズに */
+}
+
+.header.transparent {
+    background-color: rgba(255, 255, 255, 0.5);
+    /* 半透明 */
+}
+
+/* main {
+    margin-top: 60px; /* ヘッダーの高さ分だけ上の余白を作る */
+/* } */
+
+.header_all {
+    display: flex;
+    justify-content: space-between;
+    margin-inline: auto;
+}
+
+.header_all h1 {
+    height: 60px;
+    width: 150px;
+    margin-left: -1.2rem;
+}
+
+.header_all h1 img {
+    object-fit: contain;
+
+}
+
+.header_all .contact {
+    display: flex;
+    justify-content: space-between;
+    gap: 1rem;
+}
+
+
+#topimage {
+    background-image: url(../images/bg.jpeg);
+    background-position: center bottom;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 90vh;
+    max-width: 100%;
+    margin-top: 80px;
+}
+
+#topimage .topimageunner {
+    /* max-width: 700px; */
+    padding-inline: 1rem;
+    margin-inline: auto;
+    display: block;
+    flex-direction: column;
+    height: 90vh;
+    justify-content: center;
+}
+
+#topimage .topimageunner h2 {
+    padding-top: 50px;
+    margin-bottom: 1rem;
+    line-height: 1.6;
+    text-align: center;
+    font-size: clamp(1.2em, 3vw, 1.3rem);
+    margin-inline: 1rem;
+}
+
+#topimage .topimageunner h2:nth-child(2) {
+    padding-top: 0px;
+    padding-block-end: 20px;
+}
+
+#topimage .topimageunner h2 br {
+    display: none;
+}
+
+#topimage .topimageunner h5 {
+    align-items: flex-end;
+
+}
+
+#topimage .topimageunner h5 a {
+    background-color: var(--main-color);
+    color: white;
+    max-width: 500px;
+    padding-block: 1rem;
+    display: block;
+    text-align: center;
+    /* margin-block: 1rem; */
+    border-radius: 50px;
+    font-size: 1.2rem;
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 3s ease 2s, transform 3s ease 0.5s;
+    margin-inline: auto;
+
+
+}
+
+#topimage h5 a.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+#topimage h5 a:hover {
+    background-color: var(--sub-color);
+    color: var(--main-color);
+    transition: all 0.5s linear;
+}
+
+
+#first,
+#service,
+#aboutus,
+#gosoudan,
+#qa {
+    margin-bottom: 20%;
+}
+
+h2 {
+    font-size: 1.3rem;
+    margin-bottom: 1rem;
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 3s ease, transform 3s ease;
+}
+
+h2.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+h3 {
+    font-size: clamp(3.5rem, 10vw, 4rem);
+    margin-bottom: 2.5rem;
+    color: var(--main-color);
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 3s ease, transform 3s ease;
+
+}
+
+h3.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.pfont {
+    /* font-size: 1.1rem; */
+    text-align: justify;
+    padding-bottom: 3rem;
+}
+
+h4 {
+    text-align: center;
+    margin-bottom: 2rem;
+    color: var(--main-color);
+    font-size: 1.5rem;
+    margin-top: 4rem;
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 3s ease, transform 3s ease;
+    font-weight: bold;
+}
+
+h4.visible{
+    opacity: 1;
+    transform: translateY(0);
+}
+
+#first .point span{
+    font-size: 2rem;
+    color: gold;
+
+}
+
+#first ul{
+    display: block;
+    width: fit-content;
+    margin-inline: auto;
+    margin-bottom: 2rem;
+    list-style-type: disc; /* ・マークを表示（デフォルト） */
+  padding-left: 1.5em;   /* インデントを調整 */
+}
+
+
+#service .card_wrap {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 2rem;
+
+}
+
+#service .card {
+    flex-basis: calc(50% - 1rem);
+    display: flex;
+    flex-direction: column;
+    border: 1px solid gray;
+    /* border-radius: 0.5rem; */
+    padding: 1rem;
+
+}
+
+#service .card .card_img {
+    aspect-ratio: 16/9;
+}
+
+#service .card .card_img img {
+    object-fit: cover;
+    /* border-radius: 0.5rem; */
+
+}
+
+#service .card h4 {
+    text-align: center;
+    margin-block: 1rem;
+}
+
+#service .card p {
+    text-align: justify;
+}
+
+
+#aboutus {
+    background-color: var(--sub-color);
+    padding-inline: 2rem;
+    padding-bottom: 2rem;
+
+}
+
+
+#aboutus .aboutusdown1 {
+    display: flex;
+    /* text-align: end; */
+    justify-content: space-between;
+    border-top: 1px solid var(--main-color);
+    padding-top: 3rem;
+    gap: 1rem;
+}
+
+#aboutus .aboutusdown1 .aboutusleft {
+    flex-basis: 50%;
+    display: flex;
+    flex-direction: column;
+    /* justify-content: space-between; */
+    gap: 1rem;
+}
+
+#aboutus .aboutusdown1 .aboutusleft p {
+    text-align: justify;
+}
+
+#aboutus .aboutusdown1 .aboutusleft strong{
+    font-size: 1.2rem;
+}
+
+#aboutus .aboutusdown1 .watanabe {
+    background-image: url(../images/watanabesan_image.png);
+    background-position: 70% 15%;
+    background-repeat: no-repeat;
+    flex-basis: 50%;
+    aspect-ratio: 1 / 1.5;
+}
+
+
+
+#nagare {
+    display: flex;
+    justify-content: space-between;
+    gap: 0.5rem;
+    margin-bottom: 2rem;
+}
+
+#nagare .nagarecard {
+    text-align: center;
+    flex-basis: calc(25%);
+    border: 1px solid #ccc;
+    padding: 1rem;
+    border-radius: 5px;
+
+}
+
+#nagare .nagarecard h5 {
+    margin-bottom: 1.5rem;
+    font-weight: bold;
+    color: var(--main-color);
+
+}
+
+#nagare .nagarecard p {
+    text-align: justify;
+}
+
+#gosoudan h5 a {
+    background-color: var(--main-color);
+    color: white;
+    max-width: 800px;
+    padding-block: 1rem;
+    display: block;
+    text-align: center;
+    margin-block: 1rem;
+    border-radius: 50px;
+    font-size: 1.2rem;
+
+
+}
+
+#gosoudan h5 a:hover {
+    background-color: var(--sub-color);
+    color: var(--main-color);
+    transition: all 0.5s linear;
+
+
+}
+
+#subimage{
+    background-image: url(../images/subimage.jpeg);
+    height: 500px;
+    max-width: 100%;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+#qa dd {
+    margin-bottom: 1.5rem;
+    text-align: justify;
+}
+
+
+#service{
+    background-color: rgb(240, 240, 240);
+    padding-inline: 2rem;
+    padding-bottom: 2rem;
+}
+
+/* --------------- ローディング画面 --------------- */
+.loading-screen {
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 10000;
+    transition: all 1s linear;
+    /* ここから下はデザイン用 */
+    background-color: dimgray;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: aliceblue;
+}
+
+/* HTML: <div class="loader"></div> */
+.loader {
+    width: 40px;
+    height: 26px;
+    --c: no-repeat linear-gradient(#000 0 0);
+    background: var(--c) 0 100%, var(--c) 50% 100%, var(--c) 100% 100%;
+    background-size: 8px calc(100% - 4px);
+    position: relative;
+}
+
+.loader:before {
+    content: "";
+    position: absolute;
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: #000;
+    left: 0;
+    top: 0;
+    animation: l3-1 1.5s linear infinite alternate,
+        l3-2 0.75s cubic-bezier(0, 200, 0.8, 200) infinite;
+}
+
+@keyframes l3-1 {
+    100% {
+        left: calc(100% - 8px);
+    }
+}
+
+@keyframes l3-2 {
+    100% {
+        top: -0.1px;
+    }
+}
+
+/* JSで付与するクラス。これによってクラスloading_bgが指定されている要素が消える */
+.active {
+    opacity: 0;
+    visibility: hidden;
+}
+
+/* loaderここまで */
+/* ------------------------------ */
+
+/* --------------- TOPに戻るボタン --------------- */
+.topbtn {
+    width: 80px;
+    height: auto;
+    border-radius: 50%;
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    opacity: 0;
+    /* サイトが読み込まれた瞬間、一瞬画面にボタンが出てきてしまう現象を防ぐため */
+    z-index: 10000;
+    transition: all 0.5s linear;
+}
+
+.topbtn a {
+    display: block;
+    padding: 25px 0;
+    text-align: center;
+    background-color: var(--main-color);
+    color: white;
+    border-radius: 50%;
+    border: 1px solid white;
+}
+
+/* --------------- drawerButton --------------- */
+
+#drawerButton {
+    display: none;
+    /* PCでは見えない状態にする */
+}
+
+header nav ul {
+    max-width: 800px;
+    margin-inline: auto;
+    display: flex;
+    justify-content: space-between;
+}
+
+header nav ul li a {
+    padding: 1rem 0.5rem;
+    display: block;
+    transition: all 0.5s linear;
+    text-align: center;
+}
+
+header nav ul li a:hover {
+    color: var(--sub-color);
+}
+
+/* JavaScriptで付け外しするクラス  */
+.change01 {
+    background-color: darkkhaki;
+}
+
+.change02,
+#jsButton03.change02 {
+    background-color: thistle;
+}
+
+.change03 {
+    background-color: darksalmon;
+}
+
+.spchange {
+    background-color: gold;
+}
+
+
+/* footer------------------------------------------------------- */
+
+footer {
+    max-width: 100%;
+    background-color: var(--main-color);
+    color: whitesmoke;
+    padding: 3rem 1rem;
+}
+
+footer .f_all {
+    max-width: 800px;
+    /* display: flex; */
+    justify-content: space-between;
+    margin-inline: auto;
+    margin-block: 2rem;
+    flex-wrap: wrap;
+    padding-inline: 1rem;
+
+}
+
+
+footer .f_all .map iframe {
+    width: 100%;
+    aspect-ratio: 16 / 9;
+}
+
+footer address {
+    line-height: 2;
+    max-width: 800px;
+    margin-inline: auto;
+}
+
+footer address p {
+    font-size: clamp(0.9rem, 4.2vw, 1rem);
+}
+
+
+footer address p:nth-child(1) {
+    font-size: clamp(0.8rem, 3.9vw, 1.2rem);
+
+}
+
+footer address .map-link {
+    display: inline-flex;
+    align-items: center;
+    text-decoration: none;
+    color: #d93025; /* Google Mapsっぽい赤 */    font-size: 16px;
+    gap: 0.5em;
+}
+
+footer address .map-link i {
+    font-size: 1.2em;
+}
+
+footer .copy {
+    text-align: center;
+    padding: 10rem 0 0;
+}
+
+
+
+
+
+
+
+
+/* --------Media Query-------- */
+
+/* drawerButton */
+@media screen and (max-width: 575px) {
+    #drawerButton {
+        position: fixed;
+        top: 0;
+        right: 0;
+        width: 80px;
+        height: 80px;
+        /* background-color: var(--main-color); */
+        display: block;
+        z-index: 1000000000;
+        /* border-radius: 0 0 0 8px; */
+    }
+
+    #drawerButton span {
+        width: 60%;
+        height: 4px;
+        display: block;
+        background-color: var(--main-color);
+        position: absolute;
+        left: 20%;
+        transition: all 0.5s linear;
+    }
+
+    #drawerButton span:nth-child(1) {
+        top: 18px;
+    }
+
+    #drawerButton span:nth-child(2) {
+        top: 38px;
+        /* 上下中心の位置 */
+    }
+
+    #drawerButton span:nth-child(3) {
+        bottom: 18px;
+    }
+
+    /* 3本線のアニメーションにはクラスの付け外しでアニメを作る。
+    CSSのセレクターは、HTMLに今現在存在していないクラスやIDも先にデザインを作っておくことができます。 */
+    /* .closeを作っておいて、
+    JavaScriptでこのクラスをつけ外ししてButtonを変更する */
+    #drawerButton.close span:nth-child(1) {
+        transform: rotate(-45deg);
+        top: 38px;
+        /* 上下中心の位置 */
+    }
+
+    #drawerButton.close span:nth-child(2) {
+        transform: scale(0);
+    }
+
+    #drawerButton.close span:nth-child(3) {
+        transform: rotate(45deg);
+        bottom: 38px;
+        /* 上下中心の位置 */
+    }
+
+    .header {
+        padding: 10px 20px;
+        /* 内側の余白 */
+    }
+
+    header nav ul {
+        display: block;
+        position: fixed;
+        width: 120%;
+        height: 100%;
+        top: -100vh;
+        left: -10vw;
+        transition: all 0.5s linear;
+        background-color: rgba(255, 255, 255, 0.9);
+    }
+
+    header nav #menu.open {
+        top: 0;
+    }
+
+    #topimage .topimageunner h2 br {
+        display: block;
+    }
+
+    main {
+        margin-top: 0;
+        /* ヘッダーの高さ分だけ上の余白を作る */
+    }
+
+    #service .card_wrap {
+        flex-direction: column;
+    }
+
+    #aboutus {
+        padding-inline: 1rem;
+        padding-bottom: 1rem;
+    }
+
+    #aboutus .aboutusdown1 {
+        flex-direction: column-reverse;
+    }
+
+    #aboutus .aboutusdown1 .aboutusleft p {
+        text-align: center;
+    }
+
+    #nagare {
+
+        flex-direction: column;
+    }
+
+
+    section:nth-child(1) {
+        margin-block: 0;
+        margin-bottom: 5rem;
+    }
+
+}
+
