@@ -108,7 +108,7 @@ section {
     line-height: 1.6;
     text-align: center;
     font-size: clamp(1.2em, 3vw, 1.3rem);
-    margin-inline: 1rem;
+    /* margin-inline: 1rem; */
 }
 
 #topimage .topimageunner h2:nth-child(2) {
@@ -213,7 +213,6 @@ h4.visible{
     opacity: 1;
     transform: translateY(0);
 }
-
 #first .point{
     line-height: 1.5;
 }
@@ -274,7 +273,7 @@ h4.visible{
 
 #aboutus {
     background-color: var(--sub-color);
-    padding-inline: 2rem;
+    padding-inline: 1rem;
     padding-bottom: 2rem;
 
 }
@@ -519,7 +518,7 @@ footer {
     max-width: 100%;
     background-color: var(--main-color);
     color: whitesmoke;
-    padding: 3rem 1rem;
+    padding-block: 3rem;
 }
 
 footer .f_all {
@@ -543,6 +542,7 @@ footer address {
     line-height: 2;
     max-width: 800px;
     margin-inline: auto;
+    padding-inline: 1rem;
 }
 
 footer address p {
