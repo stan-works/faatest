@@ -94,6 +94,18 @@ function drawermenu() {
     demo.classList.toggle("open");
     button.classList.toggle("close");
 }
+
+// ▼ 追加：メニュー内のリンクをクリックしたらメニューを閉じる
+const navLinks = document.querySelectorAll("#menu a");
+
+navLinks.forEach(link => {
+    link.addEventListener("click", () => {
+        // メニューとボタンのクラスを元に戻す
+        demo.classList.remove("open");
+        button.classList.remove("close");
+    });
+});
+
 // -------------------------------------------------------
 
 // header-------------------------------------------
