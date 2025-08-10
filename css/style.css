@@ -440,7 +440,7 @@ h5,
 }
 
 #gosoudan h5 span.mail-img {
-    background-image: url(/images/mail_hover.webp);
+    background-image: url(../images/mail_hover.webp);
     background-size: contain;
     background-repeat: no-repeat;
     display: inline-block;
@@ -665,7 +665,7 @@ footer address .mail{
 }
 
 footer h5 span.mail-img {
-    background-image: url(/images/mail.webp);
+    background-image: url(../images/mail.webp);
     background-size: contain;
     background-repeat: no-repeat;
     display: inline-block;
