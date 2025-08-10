@@ -13,6 +13,8 @@ html {
 body {
     /* font-family: "Work Sans", serif, "Zen Old Mincho", serif; */
     /* font-family: "Kaisei Tokumin", serif; */
+    font-family: 'Work Sans', 'Zen Old Mincho', sans-serif;
+
     color: rgb(40, 40, 40);
     line-height: 1.75em;
 
@@ -107,7 +109,7 @@ section {
     margin-bottom: 1rem;
     line-height: 1.6;
     text-align: center;
-    font-size: clamp(1.2em, 3vw, 1.3rem);
+    font-size: clamp(1.1em, 3vw, 1.3rem);
     /* margin-inline: 1rem; */
 }
 
@@ -250,6 +252,46 @@ h5,
     /* インデントを調整 */
 }
 
+#first h4 br {
+    display: none;
+}
+
+#first .yorisou_img{
+    margin-inline: auto;
+    background-image: url(../images/yorisou_logo_0806re.webp);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 100%;
+    aspect-ratio: 1 /0.8;
+}
+
+#first .seminar_ss{
+    margin-inline: auto;
+    background-image: url(../images/250829_ss.jpg);
+    /* background-position: center center; */
+    background-size: contain;
+    background-repeat: no-repeat;
+    width: 100%;
+    aspect-ratio: 1 /0.9;
+}
+
+#first h5 a {
+    background-color: #00997e;
+    color: white;
+    max-width: 800px;
+    padding-block: 1rem;
+    display: block;
+    text-align: center;
+    margin-block: 1rem;
+    border-radius: 50px;
+    font-size: 1.2rem;
+}
+#first h5 a:hover {
+    background-color: var(--sub-color);
+    color: #00997e;
+    transition: all 0.5s linear;
+}
 
 #service .card_wrap {
     display: flex;
@@ -326,8 +368,9 @@ h5,
     background-image: url(../images/watanabesan_image.png);
     background-position: 70% 15%;
     background-repeat: no-repeat;
+    background-size: 100%;
     flex-basis: 50%;
-    aspect-ratio: 1 / 1.5;
+    aspect-ratio: 2 / 1.5;
 }
 
 
@@ -369,17 +412,44 @@ h5,
     margin-block: 1rem;
     border-radius: 50px;
     font-size: 1.2rem;
-
-
 }
 
 #gosoudan h5 a:hover {
     background-color: var(--sub-color);
     color: var(--main-color);
     transition: all 0.5s linear;
+}
+
+#gosoudan h5.mail {
+    border: solid 1px var(--main-color);
+    /* background-color: var(--main-color); */
+    color: var(--main-color);
+    max-width: 800px;
+    padding-block: 1rem;
+    display: block;
+    text-align: center;
+    margin-block: 1rem;
+    border-radius: 50px;
+    font-size: 1.2rem;
+    display: flex;
+    margin-inline: auto;
+    justify-content: center;
+    gap: 0.5rem;
 
 
 }
+
+#gosoudan h5 span.mail-img {
+    background-image: url(/images/mail_hover.webp);
+    background-size: contain;
+    background-repeat: no-repeat;
+    display: inline-block;
+    height: 1.6rem;
+    width: 233.9487px;
+    background-position: 0 2px;
+}
+
+
 
 #subimage {
     background-image: url(../images/subimage.jpeg);
@@ -411,7 +481,7 @@ h5,
     z-index: 10000;
     transition: all 1s linear;
     /* ここから下はデザイン用 */
-    background-color: dimgray;
+    background-color: var(--sub-color);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -589,6 +659,23 @@ footer address .map-link i {
     font-size: 1.2em;
 }
 
+footer address .mail{
+    display: flex;
+    height: 5px;
+}
+
+footer h5 span.mail-img {
+    background-image: url(/images/mail.webp);
+    background-size: contain;
+    background-repeat: no-repeat;
+    display: inline-block;
+    height: 19px;
+    width: 233.9487px;
+    margin: 6px 0 0 7px;
+
+}
+
+
 footer .copy {
     text-align: center;
     padding: 10rem 0 0;
@@ -604,8 +691,8 @@ footer .copy {
 /* --------Media Query-------- */
 
 /* drawerButton */
-@media screen and (max-width: 575px) {
-    
+@media screen and (max-width: 766px) {
+
     #drawerButton {
         position: fixed;
         top: 0;
@@ -690,6 +777,11 @@ footer .copy {
         /* ヘッダーの高さ分だけ上の余白を作る */
     }
 
+    #first h4 br.br1 {
+        display: block;
+    }
+
+
     #service .card_wrap {
         flex-direction: column;
     }
@@ -717,5 +809,13 @@ footer .copy {
         margin-block: 0;
         margin-bottom: 5rem;
     }
+
+}
+
+@media screen and (max-width: 509px) {
+    #first h4 br.br2 {
+        display: block;
+    }
+
 
 }
