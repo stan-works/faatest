@@ -85,7 +85,7 @@ section {
 
 
 #topimage {
-    background-image: url(../images/bg.jpeg);
+    background-image: url(../images/topimage.jpg);
     background-position: center bottom;
     background-repeat: no-repeat;
     background-size: cover;
@@ -122,9 +122,11 @@ section {
     display: none;
 }
 
-#topimage .topimageunner h5 {
-    align-items: flex-end;
 
+
+#topimage .topimageunner  {
+    align-items: flex-end;
+    margin-bottom: 1rem;
 }
 
 #topimage .topimageunner h5 a {
@@ -134,15 +136,17 @@ section {
     padding-block: 1rem;
     display: block;
     text-align: center;
-    /* margin-block: 1rem; */
+    margin-block: 1rem;
     border-radius: 50px;
     font-size: 1.2rem;
     opacity: 0;
     transform: translateY(30px);
     transition: opacity 3s ease 2s, transform 3s ease 0.5s;
     margin-inline: auto;
+}
 
-
+#topimage .topimageunner h5:nth-of-type(2) a {
+    background-color:#00997e;
 }
 
 #topimage h5 a.visible {
@@ -153,6 +157,12 @@ section {
 #topimage h5 a:hover {
     background-color: var(--sub-color);
     color: var(--main-color);
+    transition: all 0.5s linear;
+}
+
+#topimage h5:nth-of-type(2) a:hover {
+    background-color: var(--sub-color);
+    color: #00997e;
     transition: all 0.5s linear;
 }
 
@@ -213,7 +223,7 @@ h4 {
     margin-bottom: 2rem;
     color: var(--main-color);
     font-size: 1.5rem;
-    margin-top: 4rem;
+    margin-top: 80px;
     opacity: 0;
     transform: translateY(30px);
     transition: opacity 3s ease, transform 3s ease;
@@ -268,7 +278,7 @@ h5,
 
 #first .seminar_ss{
     margin-inline: auto;
-    background-image: url(../images/250829_ss.jpg);
+    background-image: url(../images/250829_0821.jpeg);
     /* background-position: center center; */
     background-size: contain;
     background-repeat: no-repeat;
@@ -287,10 +297,23 @@ h5,
     border-radius: 50px;
     font-size: 1.2rem;
 }
+
+#first h5 a:after{
+    font-family: "Material Icons";
+    content: "\e89e";
+}
+
+
 #first h5 a:hover {
     background-color: var(--sub-color);
     color: #00997e;
     transition: all 0.5s linear;
+}
+
+#archive p{
+    text-align: center;
+    background-color: rgb(240, 240, 240);
+    padding-block: 2rem;
 }
 
 #service .card_wrap {
@@ -332,10 +355,15 @@ h5,
 
 
 #aboutus {
-    background-color: var(--sub-color);
+    /* background-color: var(--sub-color); */
+    /* padding-inline: 1rem; */
+    padding-bottom: 2rem;
+}
+
+#aboutus .aumain{
+        background-color: var(--sub-color);
     padding-inline: 1rem;
     padding-bottom: 2rem;
-
 }
 
 
@@ -366,14 +394,12 @@ h5,
 
 #aboutus .aboutusdown1 .watanabe {
     background-image: url(../images/watanabesan_image.png);
-    background-position: 70% 15%;
+    background-position: center;
     background-repeat: no-repeat;
-    background-size: 100%;
+    background-size: 60%;
     flex-basis: 50%;
     aspect-ratio: 2 / 1.5;
 }
-
-
 
 #nagare {
     display: flex;
