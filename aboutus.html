@@ -30,12 +30,9 @@
 
 <body>
     <!-- ローディング画面 -->
-    <div class="loading-screen">
+    <!-- <div class="loading-screen">
         <div class="loader"></div>
-        <!-- <p>
-                読み込みが終わると消えます。<br />ここにCSSアニメーションなどを入れると良いでしょう
-            </p> -->
-    </div>
+    </div> -->
     <!-- TOPに戻るボタン（ドロワーメニューと被らないように） -->
     <button class="topbtn"><a href="#">TOP</a></button>
     <header class="header">
@@ -55,7 +52,7 @@
             <nav>
                 <ul id="menu">
                     <li><a href="index.html#seminarinfo">セミナー情報</a></li>
-                    <li><a href="#aboutus">会社概要</a></li>
+                    <li><a href="#aboutus">企業概要</a></li>
                     <li><a href="#gosoudan">お問い合わせ</a></li>
                     <li><a href="#qa">よくある質問</a></li>
                     <!-- <li><a href="#service">Service</a></li> -->
@@ -100,7 +97,50 @@
 
 
             <div id="aboutus">
-                <h4 class="fade-in">会社概要</h4>
+                <h4 class="fade-in">企業情報</h4>
+                <table class="history">
+                    <tr>
+                        <th colspan="2">沿革</th>
+                    </tr>
+                    <tr>
+                        <th>2016年2月</th>
+                        <td>
+                            一般社団法人姫路福祉・医療連携協議会ホスピス事業開始<br>
+                            【連携事業】
+                            <ul>
+                                <li>・訪問看護</li>
+                                <li>・訪問介護</li>
+                            </ul>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th>2025年2月</th>
+                        <td>
+                            一般社団法人ファイナンシャルアドバイザー協会
+                        </td>
+                    </tr>
+                </table>
+                <table class="cp">
+                    <tr>
+                        <th colspan="2">会社概要</th>
+                    </tr>
+                    <tr>
+                        <th>商号</th>
+                        <td>一般社団法人ファイナンシャルアドバイザー協会</td>
+                    </tr>
+                    <tr>
+                        <th>設立</th>
+                        <td>2025年2月</td>
+                    </tr>
+                    <tr>
+                        <th>代表理事</th>
+                        <td>渡邊 和司</td>
+                    </tr>
+                    <tr>
+                        <th>所在地</th>
+                        <td>兵庫県姫路市南町63 ミツワビル</td>
+                    </tr>
+                </table>
                 <div class="aumain">
                     <div class="title">
                         <h3 class="fade-in">About us</h3>
@@ -124,64 +164,64 @@
                         <div class="watanabe"></div>
                     </div>
                 </div>
-            </div>
+                </table>
 
-            <div id="gosoudan">
-                <h4 class="fade-in">お問い合わせ</h4>
-                <div id="nagare">
-                    <div class="nagarecard">
-                        <h5>1<br>
-                            お申し込み</h5>
-                        <p>メールまたは、お電話にて初回無料相談にお申し込みください。</p>
+                <div id="gosoudan">
+                    <h4 class="fade-in">お問い合わせ</h4>
+                    <div id="nagare">
+                        <div class="nagarecard">
+                            <h5>1<br>
+                                お申し込み</h5>
+                            <p>メールまたは、お電話にて初回無料相談にお申し込みください。</p>
+                        </div>
+                        <div class="nagarecard">
+                            <h5>2<br>
+                                日程調整</h5>
+                            <p>ご相談日時の調整をさせていただきます。
+                            </p>
+                        </div>
+                        <div class="nagarecard">
+                            <h5>3<br>
+                                ヒアリング</h5>
+                            <p>現状を確認し、お客さまのお考えをお伺いします。
+                                サービスの詳細についてもご確認いただけます。</p>
+                        </div>
+                        <div class="nagarecard">
+                            <h5>4<br>
+                                ご提案</h5>
+                            <p>初回の相談で伺った内容をもとにお客さまの状況などを分析、ご提案をいたします。</p>
+                        </div>
                     </div>
-                    <div class="nagarecard">
-                        <h5>2<br>
-                            日程調整</h5>
-                        <p>ご相談日時の調整をさせていただきます。
-                        </p>
-                    </div>
-                    <div class="nagarecard">
-                        <h5>3<br>
-                            ヒアリング</h5>
-                        <p>現状を確認し、お客さまのお考えをお伺いします。
-                            サービスの詳細についてもご確認いただけます。</p>
-                    </div>
-                    <div class="nagarecard">
-                        <h5>4<br>
-                            ご提案</h5>
-                        <p>初回の相談で伺った内容をもとにお客さまの状況などを分析、ご提案をいたします。</p>
-                    </div>
-                </div>
-                <!-- <h5><a href="tel:+050-1726-4632">TEL: 050-1726-4632</a></h5>
+                    <!-- <h5><a href="tel:+050-1726-4632">TEL: 050-1726-4632</a></h5>
                 <p>受付時間 : 土日祝日を除く10：00〜19：00</p> -->
-                <h5 class="mail">Email: <span class="mail-img"></span></h5>
-                <p>24時間受付：メールにてご返信差し上げます。</p>
+                    <h5 class="mail">Email: <span class="mail-img"></span></h5>
+                    <p>24時間受付：メールにてご返信差し上げます。</p>
 
-            </div>
-
-            <div id="subimage"></div>
-
-
-            <div id="qa">
-                <h4 class="fade-in">よくある質問</h4>
-                <dl>
-                    <dt>相談は有料ですか？</dt>
-                    <dd>- 初回相談は全て無料となります。</dd>
-                    <dt>相談の時間制限はありますか？</dt>
-                    <dd>- 基本は90分となります。<br>
-                        - 相談内容により、90分を超える時間がかかる場合は、事前にお時間をお知らせします。</dd>
-                    <dt>小さな子供と一緒に相談に行っても大丈夫でしょうか？</dt>
-                    <dd>- お子さま連れでも落ち着いてお話ができるようなら、大歓迎です。</dd>
-                </dl>
-            </div>
-
-            <div id="service">
-                <div class="title">
-                    <h3 class="fade-in">Service</h3>
-                    <p class="pfont">私たちは、お客様一人ひとりの人生設計を真摯にサポートします。誠実で透明性のあるアドバイスを提供し、安心して資産形成ができるようお手伝いします。</p>
-                    <p><small>現在、新たなサービスを構築中です。お客様のニーズに応える価値あるソリューションを近日中に発表いたします。</small></p>
                 </div>
-            </div>
+
+                <div id="subimage"></div>
+
+
+                <div id="qa">
+                    <h4 class="fade-in">よくある質問</h4>
+                    <dl>
+                        <dt>相談は有料ですか？</dt>
+                        <dd>- 初回相談は全て無料となります。</dd>
+                        <dt>相談の時間制限はありますか？</dt>
+                        <dd>- 基本は90分となります。<br>
+                            - 相談内容により、90分を超える時間がかかる場合は、事前にお時間をお知らせします。</dd>
+                        <dt>小さな子供と一緒に相談に行っても大丈夫でしょうか？</dt>
+                        <dd>- お子さま連れでも落ち着いてお話ができるようなら、大歓迎です。</dd>
+                    </dl>
+                </div>
+
+                <div id="service">
+                    <div class="title">
+                        <h3 class="fade-in">Service</h3>
+                        <p class="pfont">私たちは、お客様一人ひとりの人生設計を真摯にサポートします。誠実で透明性のあるアドバイスを提供し、安心して資産形成ができるようお手伝いします。</p>
+                        <p><small>現在、新たなサービスを構築中です。お客様のニーズに応える価値あるソリューションを近日中に発表いたします。</small></p>
+                    </div>
+                </div>
         </section>
     </main>
 
