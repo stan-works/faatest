@@ -124,7 +124,7 @@ section {
 
 
 
-#topimage .topimageunner  {
+#topimage .topimageunner {
     align-items: flex-end;
     margin-bottom: 1rem;
 }
@@ -146,7 +146,7 @@ section {
 }
 
 #topimage .topimageunner h5:nth-of-type(2) a {
-    background-color:#00997e;
+    background-color: #00997e;
 }
 
 #topimage h5 a.visible {
@@ -266,7 +266,7 @@ h5,
     display: none;
 }
 
-#first .yorisou_img{
+#first .yorisou_img {
     margin-inline: auto;
     background-image: url(../images/yorisou_logo_0806re.webp);
     background-size: contain;
@@ -276,7 +276,39 @@ h5,
     aspect-ratio: 1 /0.8;
 }
 
-#first .seminar_ss{
+/* テーブル共通 */
+#first .semidate {
+    border-collapse: collapse;
+    width: 100%;
+    margin-bottom: 20px;
+    text-align: center;
+    font-size: 0.9rem;
+}
+
+/* colspan=2 見出し */
+#first .semidate  th{
+    text-align: center;
+    background-color: var(--sub-color);
+    font-size: 1.2em;
+}
+
+/* th と td 共通スタイル */
+#first .semidate  th,td{
+    border-block: 1px solid #ccc;
+    padding: 0.75em;
+    vertical-align: middle;
+    font-weight: normal;
+}
+
+
+/* ul のマージン調整 */
+#first .semidate  ul {
+    margin: 0.3em 0 0 1em;
+    padding: 0;
+}
+
+
+#first .seminar_ss {
     margin-inline: auto;
     background-image: url(../images/250829_0821.jpeg);
     /* background-position: center center; */
@@ -298,7 +330,7 @@ h5,
     font-size: 1.2rem;
 }
 
-#first h5 a:after{
+#first h5 a:after {
     font-family: "Material Icons";
     content: "\e89e";
 }
@@ -310,7 +342,7 @@ h5,
     transition: all 0.5s linear;
 }
 
-#archive p{
+#archive p {
     text-align: center;
     background-color: rgb(240, 240, 240);
     padding-block: 2rem;
@@ -360,8 +392,51 @@ h5,
     padding-bottom: 2rem;
 }
 
-#aboutus .aumain{
-        background-color: var(--sub-color);
+
+/* テーブル共通 */
+#aboutus .history,
+#aboutus .cp {
+    border-collapse: collapse;
+    width: 100%;
+    margin-bottom: 80px;
+}
+
+/* colspan=2 見出し */
+#aboutus .history th[colspan="2"],
+#aboutus .cp th[colspan="2"] {
+    text-align: center;
+    background-color: var(--sub-color);
+    font-size: 1.2em;
+}
+
+/* th と td 共通スタイル */
+#aboutus .history th,
+#aboutus .history td,
+#aboutus .cp th,
+#aboutus .cp td {
+    border-block: 1px solid #ccc;
+    padding: 0.75em;
+    vertical-align: top;
+    font-weight: normal;
+}
+
+/* 左列の th */
+#aboutus .history th,
+#aboutus .cp th {
+    width: 7em;
+    text-align: left;
+    background-color: #f7f7f7;
+}
+
+/* ul のマージン調整 */
+#aboutus .history ul,
+#aboutus .cp ul {
+    margin: 0.3em 0 0 1em;
+    padding: 0;
+}
+
+#aboutus .aumain {
+    background-color: var(--sub-color);
     padding-inline: 1rem;
     padding-bottom: 2rem;
 }
@@ -371,7 +446,7 @@ h5,
     display: flex;
     /* text-align: end; */
     justify-content: space-between;
-    border-top: 1px solid var(--main-color);
+    /* border-top: 1px solid var(--main-color); */
     padding-top: 3rem;
     gap: 1rem;
 }
@@ -685,7 +760,7 @@ footer address .map-link i {
     font-size: 1.2em;
 }
 
-footer address .mail{
+footer address .mail {
     display: flex;
     height: 5px;
 }
