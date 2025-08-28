@@ -900,7 +900,8 @@ footer .copy {
         flex-direction: column-reverse;
     }
 
-    #aboutus .aboutusdown1 .aboutusleft p,ul {
+    #aboutus .aboutusdown1 .aboutusleft p,
+    #aboutus .aboutusdown1 .aboutusleft ul {
         text-align: center;
     }
 
