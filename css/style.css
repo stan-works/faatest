@@ -16,7 +16,8 @@ body {
     font-family: 'Work Sans', 'Zen Old Mincho', sans-serif;
 
     color: rgb(40, 40, 40);
-    line-height: 1.75em;
+        line-height: 1.4;
+
 
 }
 
@@ -168,6 +169,8 @@ section {
 
 
 #first,
+#seminarinfo,
+#archive,
 #service,
 #aboutus,
 #gosoudan,
@@ -241,8 +244,8 @@ h5,
     overflow-wrap: break-word;
 }
 
-#first .point {
-    line-height: 1.5;
+#first  {
+    line-height: 1.75;
 }
 
 #first .point span {
@@ -277,23 +280,25 @@ h5,
 }
 
 /* テーブル共通 */
-#first .semidate {
+#seminarinfo .semidate {
     border-collapse: collapse;
     width: 100%;
     margin-bottom: 20px;
     text-align: center;
-    font-size: 0.9rem;
+    font-size: 0.8rem;
+    line-height: 1.4;
+
 }
 
 /* colspan=2 見出し */
-#first .semidate  th{
+#seminarinfo .semidate  th{
     text-align: center;
     background-color: var(--sub-color);
     font-size: 1.2em;
 }
 
 /* th と td 共通スタイル */
-#first .semidate  th,td{
+#seminarinfo .semidate  th,td{
     border-block: 1px solid #ccc;
     padding: 0.75em;
     vertical-align: middle;
@@ -302,13 +307,13 @@ h5,
 
 
 /* ul のマージン調整 */
-#first .semidate  ul {
+#seminarinfo .semidate  ul {
     margin: 0.3em 0 0 1em;
     padding: 0;
 }
 
 
-#first .seminar_ss {
+#seminarinfo .seminar_ss {
     margin-inline: auto;
     background-image: url(../images/250829_0821.jpeg);
     /* background-position: center center; */
@@ -317,8 +322,7 @@ h5,
     width: 100%;
     aspect-ratio: 1 /0.9;
 }
-
-#first h5 a {
+#seminarinfo h5 a {
     background-color: #00997e;
     color: white;
     max-width: 800px;
@@ -330,13 +334,13 @@ h5,
     font-size: 1.2rem;
 }
 
-#first h5 a:after {
+#seminarinfo h5 a:after {
     font-family: "Material Icons";
     content: "\e89e";
 }
 
 
-#first h5 a:hover {
+#seminarinfo h5 a:hover {
     background-color: var(--sub-color);
     color: #00997e;
     transition: all 0.5s linear;
@@ -447,7 +451,7 @@ h5,
     /* text-align: end; */
     justify-content: space-between;
     /* border-top: 1px solid var(--main-color); */
-    padding-top: 3rem;
+    /* padding-top: 3rem; */
     gap: 1rem;
 }
 
@@ -455,7 +459,7 @@ h5,
     flex-basis: 50%;
     display: flex;
     flex-direction: column;
-    /* justify-content: space-between; */
+    justify-content: space-between;
     gap: 1rem;
 }
 
@@ -888,7 +892,7 @@ footer .copy {
     }
 
     #aboutus {
-        padding-inline: 1rem;
+        /* padding-inline: 1rem; */
         padding-bottom: 1rem;
     }
 
