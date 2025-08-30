@@ -17,6 +17,7 @@ body {
 
     color: rgb(40, 40, 40);
         line-height: 1.4;
+        text-align: justify;
 
 
 }
@@ -90,7 +91,7 @@ section {
     background-position: center bottom;
     background-repeat: no-repeat;
     background-size: cover;
-    height: 90vh;
+    height: 60vh;
     max-width: 100%;
     margin-top: 80px;
 }
@@ -171,6 +172,8 @@ section {
 #first,
 #seminarinfo,
 #archive,
+#licenseinfo,
+#soudaninfo,
 #service,
 #aboutus,
 #gosoudan,
@@ -322,8 +325,10 @@ h5,
     width: 100%;
     aspect-ratio: 1 /0.9;
 }
-#seminarinfo h5 a {
-    background-color: #00997e;
+#seminarinfo h5 a,
+#licenseinfo h5 a,
+#soudaninfo h5 a{
+    background-color: var(--main-color);
     color: white;
     max-width: 800px;
     padding-block: 1rem;
@@ -334,22 +339,46 @@ h5,
     font-size: 1.2rem;
 }
 
-#seminarinfo h5 a:after {
+#seminarinfo h5 a:after,
+#licenseinfo h5 a:after{
     font-family: "Material Icons";
     content: "\e89e";
 }
 
 
-#seminarinfo h5 a:hover {
+#seminarinfo h5 a:hover,
+#licenseinfo h5 a:hover,
+#soudaninfo h5 a:hover {
     background-color: var(--sub-color);
-    color: #00997e;
+    color:var(--main-color);
     transition: all 0.5s linear;
+}
+
+#seminarinfo p{
+font-size: 0.7rem;
+text-align: right;
 }
 
 #archive p {
     text-align: center;
     background-color: rgb(240, 240, 240);
     padding-block: 2rem;
+}
+
+#partner {
+  display: flex;
+  flex-wrap: nowrap;     /* 折り返さず横並び維持 */
+  gap: 1rem;             /* ロゴ同士の間隔 */
+  justify-content: space-between;
+  align-items: center;
+}
+
+#partner img {
+  max-height: 80px;      /* PCでの高さ */
+  height: auto;
+  width: auto;
+  max-width: 100%;
+  object-fit: contain;
 }
 
 #service .card_wrap {
@@ -438,6 +467,12 @@ h5,
     margin: 0.3em 0 0 1em;
     padding: 0;
 }
+
+/* テキストをコピーできなように */
+#aboutus .nocopy{
+    user-select: none;
+}
+
 
 #aboutus .aumain {
     background-color: var(--sub-color);
