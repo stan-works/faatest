@@ -87,14 +87,17 @@ section {
 
 
 #topimage {
-    background-image: url(../images/topimage.jpg);
-    background-position: center bottom;
+    background-image: url(../images/topimage.webp);
+    background-position: 10% bottom;
     background-repeat: no-repeat;
     background-size: cover;
-    height: 60vh;
+    height: 90vh;
     max-width: 100%;
     margin-top: 80px;
 }
+
+
+
 
 #topimage .topimageunner {
     /* max-width: 700px; */
@@ -468,9 +471,13 @@ text-align: right;
     padding: 0;
 }
 
-/* テキストをコピーできなように */
+/* テキストをコピーできないように */
 #aboutus .nocopy{
-    user-select: none;
+user-select: none;
+  /* 必要に応じてベンダープレフィックスを追加 */
+  -webkit-user-select: none; /* Safari用 */
+  -moz-user-select: none;    /* Firefox用 */
+  -ms-user-select: none;     /* Internet Explorer/Edge用 */
 }
 
 
