@@ -368,7 +368,7 @@ text-align: right;
     padding-block: 2rem;
 }
 
-#partner {
+#partner .partnerall{
   display: flex;
   flex-wrap: nowrap;     /* 折り返さず横並び維持 */
   gap: 1rem;             /* ロゴ同士の間隔 */
@@ -376,7 +376,7 @@ text-align: right;
   align-items: center;
 }
 
-#partner img {
+#partner .partnerall img {
   max-height: 80px;      /* PCでの高さ */
   height: auto;
   width: auto;
